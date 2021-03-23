@@ -1,0 +1,364 @@
+*{
+	margin:0; 
+	padding:0;
+	text-decoration:none;
+	list-style:none;
+	box-sizing: border-box;
+}
+
+.web_width{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.section_padding{
+	padding-top: 80px;
+	padding-bottom: 60px;
+}
+.section_title{
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 40px;
+	padding-bottom: 40px;
+}
+
+body{
+	font-family: sans-serif;
+	background: #f1f1f1;
+}
+
+/* scroll to top strat */
+#return-to-top{
+	z-index: 9998;
+}
+/* scroll to top End */
+
+/* Hader strat */
+#home{
+	position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+nav{
+	background: #0082d6;
+    height: 80px;
+    width: 100%;
+}
+nav label.logo a{
+	color:white;
+	font-size: 25px;
+	padding: 0 50px;
+	line-height: 80px;
+	font-weight: 900;
+}
+nav ul{
+	float: right;
+	margin-right: 20px;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a{
+	color: white;
+	font-size: 17px;
+	padding: 7px 10px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	transition: .5s;
+}
+
+nav ul li a.active, nav ul li a:hover{
+	background: #1b9bff;
+}
+/* mobile nev start */
+nav label.checkbtn{
+	float: right;
+	color:white;
+	font-size: 30px;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+nav input#check{
+	display: none;
+}
+
+@media (max-width: 822px){
+	nav label.logo a{
+		font-size: 20px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 15px;
+	}
+}
+@media (max-width: 740px){
+	nav label.checkbtn{
+		display: block;
+	}
+	nav ul{
+		position: fixed;
+		width:100%;
+		height:100vh;
+		background: #284e74;
+		top:80px;
+		text-align:center;
+		left: -100%;
+		transition: all 0.5s;
+		z-index: 9999;
+	}
+	nav ul li{
+		display: block;
+		margin:50px 0;
+		line-height: 30px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	nav ul li a.active, nav ul li a:hover{
+		background: none;
+		color: #6dbfff;
+	}
+	nav input#check:checked ~ ul{
+		left: 0;
+	}
+}
+/* mobile nev End */
+/* Hader End */
+
+/* About start */
+.section_title{
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 40px;
+	padding-bottom: 40px;
+}
+.about_us_inner{
+	display: flex;
+	flex-wrap:wrap;
+	margin: auto;
+}
+.about_us_left{
+    width: 400px;
+	margin: 0 auto;
+}
+.about_us_left img{
+    width: 100%;
+}
+.about_us_right{
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	text-align: justify;
+	line-height: 30px;
+	width: 740px;
+	margin: auto;
+}
+.about_us_right p{
+	padding-bottom: 4px;
+}
+.about_us_button{
+	padding: 15px 35px;
+    background: #389aff;
+    border: none;
+    font-size: 16px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5px;
+	cursor: pointer;
+	border: 3px solid #389aff;
+	transition: .3s;
+}
+.about_us_button:hover{
+	background: white;
+    color: #389aff;
+	font-weight: bold;
+}
+.about_us_button:focus{
+	outline: none;
+}
+@media (max-width: 1140px){
+	.about_us_right{
+		margin-top: 10px;
+	}
+}
+@media (max-width: 740px){
+	.about_us_right{
+		padding: 0 8px;
+	}
+}
+/* About End */
+
+/* Team start */
+.team_member{
+	display:flex;
+	flex-wrap:wrap;
+	width: auto;
+	text-align:center;
+	justify-content: center;
+}
+.team{
+	background-color: #0082d6;
+	margin:5px auto;
+	margin-bottom: 50px;
+	width: 300px;
+	padding: 20px;
+	line-height: 20px;
+	position: relative;
+	transition: .5s;
+}
+.team:hover{
+	background-color: #389aff;
+	
+}
+.team_image{
+	
+}
+
+.team_image img{
+	width: 100%;
+	border-radius: 5px;
+}
+.team h3{
+	margin-top: 50px;
+	font-size:26px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.team p.role{
+	margin: 12px 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+.team p.member_details{
+	text-align: justify;
+	font-size: 16px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+/* Team End */
+
+/* contact start */
+#contact{
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url(img/cover.jpg);
+	background-size: cover;
+	width: 100%;
+	
+}
+#contact h2{
+	color: white;
+}
+.contact_controler{
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+.social_area{
+	margin: 0 auto;
+}
+.social_area i.fa{
+	color: white;
+	padding: 10px 13px;
+    border: 2px solid white;
+    border-radius: 65px;
+    cursor: pointer;
+    font-size: 16px;
+	transition:.4s;
+}
+.social_area_content{
+	margin: 10px 0;
+}
+.social_area i.fa:hover{
+	background: white;
+	color: black;
+}
+.social_area span{
+	color: white;
+	padding-left: 3px;
+	font-size: 16px;
+}
+
+.contact_form{
+	margin: 0 auto;
+}
+.contact_form form input, .contact_form form textarea{
+	padding: 13px 20px;
+    margin: 10px 0;
+    width: 500px;
+    font-size: 16px;
+	background: #00000098;
+	color: white;
+	border: 2px solid white;
+}
+.contact_form form input::placeholder, .contact_form form textarea::placeholder{
+	color: white;
+	opacity: 0.85;
+}
+.contact_form form input:focus, .contact_form form textarea:focus{
+	outline: none;
+}
+.contact_form form button.submit{
+	padding: 18px 57px;
+    background: #00000098;
+    font-size: 16px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5px;
+    cursor: pointer;
+	outline:none;
+	border: 2px solid white;
+	font-weight: bold;
+    transition: .3s;
+	font-size: 16px;
+
+}
+.contact_form form button.submit:hover{
+	background: #ffffffa8;
+	color: black;
+	border-color: transparent;
+}
+.copyright{
+	padding: 25px;
+    background: #000000a6;
+    margin-top: 95px;
+}
+.copyright p{
+	color: white;
+	text-align: center;
+}
+@media (max-width: 1051px){
+	.social_area iframe{
+		width: 380px;
+	}
+	.contact_form form input, .contact_form form textarea{
+		width: 380px;
+	}
+}
+@media (max-width: 793px){
+	.social_area iframe{
+		margin-bottom: 40px;
+	}
+	.social_area iframe{
+		max-width: 450px;
+	}
+	.contact_form form input, .contact_form form textarea{
+		max-width: 450px;
+	}
+}
+@media (max-width: 395px){
+	.social_area iframe{
+		margin-bottom: 40px;
+	}
+	.social_area iframe{
+		max-width: 300px;
+	}
+	.contact_form form input, .contact_form form textarea{
+		max-width: 300px;
+	}
+}
+/* contact End */
